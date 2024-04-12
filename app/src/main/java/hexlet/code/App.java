@@ -15,7 +15,6 @@ public class App {
             case (1):
                 Cli.sayHi();
             case (2):
-                Cli.sayHi();
                 Even.startEvenGame();
         }
     }
