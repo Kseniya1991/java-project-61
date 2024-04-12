@@ -9,7 +9,7 @@ public class Even {
         System.out.println("Your answer: ");
 
         Scanner scanner = new Scanner(System.in);
-        String number = scanner.nextLine();
+        String answer = scanner.next();
 
     }
 }
