@@ -21,7 +21,6 @@ public class EvenOrNotGame {
 
             if (!(answer.equals("no")) && !(answer.equals("yes"))) {
                 System.out.println(answer + " is wrong answer ;(. \nLet's try again, " + username + "!");
-                break;
             }
 
             if ((number % 2 == 0 && answer.equals("yes")) || number % 2 != 0 && answer.equals("no")) {
