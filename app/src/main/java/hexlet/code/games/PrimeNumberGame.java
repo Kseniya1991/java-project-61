@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class PrimeNumberGame {
     public static void startPrimeNumberGame() {
         /*System.out.println("Welcome to the Brain Games!\n" + "May I have your name?");
-        Scanner scanner = new Scanner(System.in);
-        String username = scanner.next();
+
         System.out.println("Hello, " + username + "!");*/
 
+
+        Scanner scanner = new Scanner(System.in);
+        String username = scanner.next();
+        
         int count = 0;
         while (count < 3) {
             int number = (int) (Math.random() * 100);
