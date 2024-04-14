@@ -11,7 +11,7 @@ public class CalculatorGame {
         String userName = scanner.next();
         System.out.println("Hello, " + userName + "!");
         int count = 0;
-        while (count < 3){
+        while (count < 3) {
             int indexOfOperation = (int) (Math.random() * 3);
             String nameOfOperation = "";
             int firstNumber = (int) (Math.random() * 100);
@@ -27,6 +27,8 @@ public class CalculatorGame {
                 case (2):
                     nameOfOperation = " * ";
                     break;
+                default:
+                    break;
             }
             int result = 0;
 
@@ -40,15 +42,19 @@ public class CalculatorGame {
                 case (2):
                     result = Math.multiplyExact(firstNumber, secondNumber);
                     break;
+                default:
+                    break;
             }
 
-            System.out.println("What is the result of the expression?\nQuestion: " + firstNumber + nameOfOperation + secondNumber + "\nYour answer: ");
+            System.out.println("What is the result of the expression?\nQuestion: "
+                    + firstNumber + nameOfOperation + secondNumber + "\nYour answer: ");
             int answer = scanner.nextInt();
             if (answer == result) {
                 System.out.println("Correct!");
                 count++;
             } else {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + result + "'. \nLet's try again, " + userName + "!");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '"
+                        + result + "'. \nLet's try again, " + userName + "!");
                 break;
             }
         }

@@ -15,7 +15,8 @@ public class PrimeNumberGame {
         while (count < 3) {
             int number = (int) (Math.random() * 100);
             String result = "";
-            System.out.println("Answer 'yes' if given number is prime. Otherwise result 'no'.\nQuestion: " + number);
+            System.out.println("Answer 'yes' if given number is prime. "
+                    + "Otherwise result 'no'.\nQuestion: " + number);
 
             if (number > 1) {
                 for (int i = 2; i * i <= number; i++) {
@@ -37,7 +38,8 @@ public class PrimeNumberGame {
                 System.out.println("Correct!");
                 count++;
             } else {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + result + "'. \nLet's try again, " + userName + "!");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. "
+                        + "Correct answer was '" + result + "'. \nLet's try again, " + userName + "!");
                 break;
             }
         }

@@ -31,8 +31,8 @@ public class GreatestCommonDivisorGame {
                 }
                 result = min;
             }
-            System.out.println("Find the greatest common divisor of given numbers.\n" +
-                    "Question: " + firstNumber + " " + secondNumber);
+            System.out.println("Find the greatest common divisor of given numbers.\n"
+                    + "Question: " + firstNumber + " " + secondNumber);
             int answer = scanner.nextInt();
             System.out.println("Your answer: " + answer);
 
@@ -40,7 +40,8 @@ public class GreatestCommonDivisorGame {
                 System.out.println("Correct!");
                 count++;
             } else {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '" + result + "'. \nLet's try again, " + userName + "!");
+                System.out.println("'" + answer + "'" + " is wrong answer ;(. "
+                        + "Correct answer was '" + result + "'. \nLet's try again, " + userName + "!");
                 break;
             }
         }
@@ -50,4 +51,3 @@ public class GreatestCommonDivisorGame {
         }
     }
 }
-
