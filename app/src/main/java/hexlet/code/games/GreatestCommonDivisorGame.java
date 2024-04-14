@@ -21,6 +21,10 @@ public class GreatestCommonDivisorGame {
             int result = 0;
             int modulo = max % min;
 
+            if (max == 0 || min == 0) {
+                result = 1;
+            }
+
             if (modulo == 0) {
                 result = min;
             } else {
