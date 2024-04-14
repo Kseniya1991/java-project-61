@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class PrimeNumberGame {
     public static void startPrimeNumberGame() {
-        System.out.println("Welcome to the Brain Games!\n" + "May I have your name?");
+        /*System.out.println("Welcome to the Brain Games!\n" + "May I have your name?");
         Scanner scanner = new Scanner(System.in);
         String username = scanner.next();
-        System.out.println("Hello, " + username + "!");
+        System.out.println("Hello, " + username + "!");*/
 
         int count = 0;
         while (count < 3) {
             int number = (int) (Math.random() * 100);
             String result = "";
-            System.out.println("Answer 'yes' if given number is prime. Otherwise result 'no'.");
+            System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
             System.out.println("Question: " + number);
 
             if (number < 2) {
@@ -26,9 +26,10 @@ public class PrimeNumberGame {
                 if (number % i == 0) {
                     counter++;
                 }
-                if (count >= countOfDividers) {
-                    result = "no";
-                }
+            }
+
+            if (count >= countOfDividers) {
+                result = "no";
             }
 
             String answer = scanner.next();
