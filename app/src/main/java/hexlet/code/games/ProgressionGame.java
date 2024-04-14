@@ -49,7 +49,6 @@ public class ProgressionGame {
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. "
                         + "Correct answer was '" + result + "'. \nLet's try again, " + username + "!");
-                break;
             }
         }
 
