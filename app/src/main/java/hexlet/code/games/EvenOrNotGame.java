@@ -16,7 +16,7 @@ public class EvenOrNotGame {
             System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n"
                     + "Question: " + number);
             System.out.println("Your answer: ");
-            String answer = scanner.next();
+            String answer = scanner.nextLine();
 
             if (!(answer.equals("no")) && !(answer.equals("yes"))) {
                 System.out.println(answer + " is wrong answer ;(. \nLet's try again, " + userName + "!");
@@ -27,6 +27,7 @@ public class EvenOrNotGame {
                 System.out.println("Correct!");
                 count++;
             }
+
             if ((number % 2 == 0 && answer.equals("no"))) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'. "
                         + "\nLet's try again, " + userName + "!");
