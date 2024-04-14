@@ -29,7 +29,7 @@ public class ProgressionGame {
 
             int result = progression[(int) (Math.random() * 9)];
 
-            System.out.print("What number is missing in the progression?\nQuestion: ");
+            System.out.print("What number is missing in the progression?\nQuestion: " + result);
 
             for (int i = 0; i < progression.length - 1; i++) {
                 if (progression[i] != result) {
