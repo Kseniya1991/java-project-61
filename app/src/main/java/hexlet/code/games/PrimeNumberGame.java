@@ -19,7 +19,7 @@ public class PrimeNumberGame {
             if (number < 2) {
                 result = "no";
             }
-            
+
             for (int i = 2; i <= number / 2; i++) {
                 if (number % i == 0) {
                     result = "no";
