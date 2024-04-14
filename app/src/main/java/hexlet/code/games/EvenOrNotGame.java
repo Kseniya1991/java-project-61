@@ -31,11 +31,13 @@ public class EvenOrNotGame {
             if ((number % 2 == 0 && answer.equals("no"))) {
                 System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'. "
                         + "\nLet's try again, " + username + "!");
+                break;
             }
 
             if (number % 2 != 0 && answer.equals("yes")) {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'. "
                         + "\nLet's try again, " + username + "!");
+                break;
             }
         }
 
