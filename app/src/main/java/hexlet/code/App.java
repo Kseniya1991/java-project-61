@@ -1,9 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.CalculatorGame;
-import hexlet.code.games.EvenOrNotGame;
-import hexlet.code.games.GreatestCommonDivisorGame;
-import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -15,6 +12,7 @@ public class App {
                 "\n3 - Calculator" +
                 "\n4 - GCD" +
                 "\n5 - Progression" +
+                "\n6 - Prime" +
                 "\n0 - Exit" +
                 "\nYour choice: ");
         Scanner scanner = new Scanner(System.in);
@@ -30,6 +28,8 @@ public class App {
                 GreatestCommonDivisorGame.startGame();
             case (5):
                 ProgressionGame.startProgressionGame();
+            case (6):
+                PrimeNumberGame.startPrimeNumberGame();
         }
     }
 }
