@@ -13,8 +13,8 @@ public class EvenOrNotGame {
         int count = 0;
         while (count < 3) {
             int number = (int) (Math.random() * 100);
-            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.\n"
-                    + "Question: " + number);
+            System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+            System.out.println("Question: " + number);
             System.out.println("Your answer: ");
             String answer = scanner.nextLine();
 
