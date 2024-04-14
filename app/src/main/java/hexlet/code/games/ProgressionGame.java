@@ -14,12 +14,12 @@ public class ProgressionGame {
         int count = 0;
 
         while (count < 3) {
-            int summWith = (int) (Math.random() * 10);
             int begin = (int) (Math.random() * 50);
+            int summWith = (int) (Math.random() * 10);
 
             int[] progression = new int[10];
 
-            for (int i = 0; i < progression.length - 1; i++) {
+            for (int i = 0; i < progression.length; i++) {
                 if (i == 0) {
                     progression[i] = begin + summWith;
                 } else {
@@ -31,7 +31,7 @@ public class ProgressionGame {
 
             System.out.print("What number is missing in the progression?\nQuestion: " + result);
 
-            for (int i = 0; i < progression.length - 1; i++) {
+            for (int i = 0; i < progression.length; i++) {
                 if (progression[i] != result) {
                     System.out.print(progression[i] + " ");
                 } else {
