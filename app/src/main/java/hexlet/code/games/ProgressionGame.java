@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public class ProgressionGame {
     public static void startProgressionGame() {
-        Cli.sayHi();
+        System.out.println("Welcome to the Brain Games!\n" + "May I have your name?");
         Scanner scanner = new Scanner(System.in);
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
+        String username = scanner.next();
+        System.out.println("Hello, " + username + "!");
 
         int count = 0;
 
@@ -48,13 +48,13 @@ public class ProgressionGame {
                 count++;
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. "
-                        + "Correct answer was '" + result + "'. \nLet's try again, " + userName + "!");
+                        + "Correct answer was '" + result + "'. \nLet's try again, " + username + "!");
                 break;
             }
         }
 
         if (count == 3) {
-            System.out.println("Congratulations, " + userName + "!");
+            System.out.println("Congratulations, " + username + "!");
         }
     }
 }

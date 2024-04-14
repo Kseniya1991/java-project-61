@@ -6,10 +6,11 @@ import java.util.Scanner;
 
 public class CalculatorGame {
     public static void startCalculatorGame() {
-        Cli.sayHi();
+        System.out.println("Welcome to the Brain Games!\n" + "May I have your name?");
         Scanner scanner = new Scanner(System.in);
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
+        String username = scanner.next();
+        System.out.println("Hello, " + username + "!");
+
         int count = 0;
         while (count < 3) {
             int indexOfOperation = (int) (Math.random() * 3);
@@ -46,20 +47,21 @@ public class CalculatorGame {
                     break;
             }
 
-            System.out.println("What is the result of the expression?\nQuestion: "
-                    + firstNumber + nameOfOperation + secondNumber + "\nYour answer: ");
+            System.out.println("What is the result of the expression?");
+            System.out.println("Question: " + firstNumber + nameOfOperation + secondNumber);
+            System.out.println("Your answer: ");
             int answer = scanner.nextInt();
             if (answer == result) {
                 System.out.println("Correct!");
                 count++;
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '"
-                        + result + "'. \nLet's try again, " + userName + "!");
+                        + result + "'. \nLet's try again, " + username + "!");
                 break;
             }
         }
         if (count == 3) {
-            System.out.println("Congratulations, " + userName + "!");
+            System.out.println("Congratulations, " + username + "!");
         }
     }
 }

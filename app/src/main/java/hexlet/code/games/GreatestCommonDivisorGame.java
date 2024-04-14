@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public class GreatestCommonDivisorGame {
     public static void startGame() {
-        Cli.sayHi();
+        System.out.println("Welcome to the Brain Games!\n" + "May I have your name?");
         Scanner scanner = new Scanner(System.in);
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
+        String username = scanner.next();
+        System.out.println("Hello, " + username + "!");
 
         int count = 0;
 
@@ -31,8 +31,8 @@ public class GreatestCommonDivisorGame {
                 }
                 result = min;
             }
-            System.out.println("Find the greatest common divisor of given numbers.\n"
-                    + "Question: " + firstNumber + " " + secondNumber);
+            System.out.println("Find the greatest common divisor of given numbers.");
+            System.out.println("Question: " + firstNumber + " " + secondNumber);
             int answer = scanner.nextInt();
             System.out.println("Your answer: " + answer);
 
@@ -41,13 +41,13 @@ public class GreatestCommonDivisorGame {
                 count++;
             } else {
                 System.out.println("'" + answer + "'" + " is wrong answer ;(. "
-                        + "Correct answer was '" + result + "'. \nLet's try again, " + userName + "!");
+                        + "Correct answer was '" + result + "'. \nLet's try again, " + username + "!");
                 break;
             }
         }
 
         if (count == 3) {
-            System.out.println("Congratulations, " + userName + "!");
+            System.out.println("Congratulations, " + username + "!");
         }
     }
 }
