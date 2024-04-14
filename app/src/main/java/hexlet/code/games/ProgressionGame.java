@@ -14,9 +14,7 @@ public class ProgressionGame {
         int count = 0;
 
         while (count < 3) {
-            //int begin = (int) (Math.random() * 10);
             int summWith = (int) (Math.random() * 10);
-
             int[] progression = new int[10];
 
             for (int i = 0; i < progression.length; i++) {
