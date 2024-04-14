@@ -4,7 +4,7 @@ import hexlet.code.Cli;
 
 import java.util.Scanner;
 
-public class Calculator {
+public class CalculatorGame {
     public static void startCalculatorGame() {
         Cli.sayHi();
         Scanner scanner = new Scanner(System.in);
