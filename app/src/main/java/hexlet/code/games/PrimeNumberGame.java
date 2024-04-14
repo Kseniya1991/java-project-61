@@ -13,18 +13,21 @@ public class PrimeNumberGame {
         while (count < 3) {
             int number = (int) (Math.random() * 100);
             String result = "";
-            System.out.println("Answer 'yes' if given number is prime. "
-                    + "Otherwise result 'no'.\nQuestion: " + number);
+            System.out.println("Answer 'yes' if given number is prime. Otherwise result 'no'.");
+            System.out.println("Question: " + number);
 
             if (number < 2) {
                 result = "no";
             }
 
-            for (int i = 2; i <= number / 2; i++) {
+            int countOfDividers = 3;
+            int count = 0;
+            for (int i = 1; i <= number; i++) {
                 if (number % i == 0) {
+                    count++;
+                }
+                if (count >= countOfDividers) {
                     result = "no";
-                } else {
-                    result = "yes";
                 }
             }
 
