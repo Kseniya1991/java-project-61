@@ -14,3 +14,11 @@
 например 35 + 16, которое нужно вычислить и записать правильный ответ:
 
 ![](https://github.com/Kseniya1991/java-project-61/blob/main/calculatorGame.jpg)
+
+Игра "НОД"
+Суть игры в следующем: пользователю показывается два случайных числа, например, 25 и 50. 
+Пользователь должен вычислить и ввести наибольший общий делитель этих чисел:
+
+![](https://github.com/Kseniya1991/java-project-61/blob/main/gcdCorrect.jpg)
+
+![](https://github.com/Kseniya1991/java-project-61/blob/main/gcdFail.jpg)
