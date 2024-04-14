@@ -21,10 +21,10 @@ public class PrimeNumberGame {
             }
 
             int countOfDividers = 3;
-            int count = 0;
+            int counter = 0;
             for (int i = 1; i <= number; i++) {
                 if (number % i == 0) {
-                    count++;
+                    counter++;
                 }
                 if (count >= countOfDividers) {
                     result = "no";
