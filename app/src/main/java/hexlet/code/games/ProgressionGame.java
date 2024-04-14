@@ -1,7 +1,5 @@
 package hexlet.code.games;
 
-import hexlet.code.Cli;
-
 import java.util.Scanner;
 
 public class ProgressionGame {
@@ -27,7 +25,8 @@ public class ProgressionGame {
 
             int result = progression[(int) (Math.random() * 9)];
 
-            System.out.print("What number is missing in the progression?\nQuestion: ");
+            System.out.println("What number is missing in the progression?");
+            System.out.print("Question: ");
 
             for (int i = 0; i < progression.length; i++) {
                 if (progression[i] != result) {
