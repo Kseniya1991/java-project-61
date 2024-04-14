@@ -16,17 +16,16 @@ public class PrimeNumberGame {
             System.out.println("Answer 'yes' if given number is prime. "
                     + "Otherwise result 'no'.\nQuestion: " + number);
 
-            if (number > 1) {
-                for (int i = 2; i * i <= number; i++) {
-                    if (number % i == 0) {
-                        result = "no";
-                        break;
-                    } else {
-                        result = "yes";
-                    }
-                }
-            } else {
+            if (number < 2) {
                 result = "no";
+            }
+            
+            for (int i = 2; i <= number / 2; i++) {
+                if (number % i == 0) {
+                    result = "no";
+                } else {
+                    result = "yes";
+                }
             }
 
             String answer = scanner.next();
