@@ -22,3 +22,16 @@
 ![](https://github.com/Kseniya1991/java-project-61/blob/main/gcdCorrect.jpg)
 
 ![](https://github.com/Kseniya1991/java-project-61/blob/main/gcdFail.jpg)
+
+Игра "Арифметическая прогрессия"
+Игроку дается ряд чисел, образующий арифметическую прогрессию, заменив любое из чисел двумя точками. Игрок должен определить это число:
+
+![](https://github.com/Kseniya1991/java-project-61/blob/main/ProgressionCorrect.jpg)
+![](https://github.com/Kseniya1991/java-project-61/blob/main/ProgressionFailed.jpg)
+
+Игра "Простое ли число?"
+Пользователю показывается случайное число.
+И ему нужно ответить yes, если число простое, или no — если оно не является простым:
+
+![](https://github.com/Kseniya1991/java-project-61/blob/main/PrimeNumCorrect.jpg)
+![](https://github.com/Kseniya1991/java-project-61/blob/main/PrimeNumFail.jpg)
