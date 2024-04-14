@@ -24,16 +24,22 @@ public class App {
         switch (choice) {
             case (1):
                 Cli.sayHi();
+                break;
             case (2):
                 EvenOrNotGame.startEvenGame();
+                break;
             case (3):
                 CalculatorGame.startCalculatorGame();
+                break;
             case (4):
                 GreatestCommonDivisorGame.startGame();
+                break;
             case (5):
                 ProgressionGame.startProgressionGame();
+                break;
             case (6):
                 PrimeNumberGame.startPrimeNumberGame();
+                break;
             default:
                 break;
         }
