@@ -1,10 +1,6 @@
 package hexlet.code;
 
-import hexlet.code.games.CalculatorGame;
-import hexlet.code.games.EvenOrNotGame;
-import hexlet.code.games.GreatestCommonDivisorGame;
-import hexlet.code.games.PrimeNumberGame;
-import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.*;
 
 import java.util.Scanner;
 
@@ -23,10 +19,11 @@ public class App {
         int choice = scanner.nextInt();
         switch (choice) {
             case (1):
-                Cli.sayHi();
+                Cli.sayHi(); //только приветствие
                 break;
             case (2):
                 EvenOrNotGame.startEvenGame();
+
                 break;
             case (3):
                 CalculatorGame.startCalculatorGame();
