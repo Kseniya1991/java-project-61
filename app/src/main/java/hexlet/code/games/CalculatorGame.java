@@ -2,12 +2,10 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
 public class CalculatorGame {
     public static void startCalculatorGame() {
-        String rules = "What is the result of the expression?"; //правила
-        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2]; //три массива нагенерить три раза
+        String rules = "What is the result of the expression?";
+        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];
 
         for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
             questionAnswer[i] = createQuestionAndAnswer();
@@ -17,7 +15,7 @@ public class CalculatorGame {
     }
 
     public static String[] createQuestionAndAnswer() {
-        String[] result = new String[2]; //возвращаемый массив
+        String[] result = new String[2];
 
         int firstNumber = (int) (Math.random() * 100);
         int indexOfOperation = (int) (Math.random() * 3);
@@ -54,7 +52,7 @@ public class CalculatorGame {
                 break;
         }
 
-        result[0] =  firstNumber + " " + nameOfOperation + " " + secondNumber; //вопрос
+        result[0] =  firstNumber + " " + nameOfOperation + " " + secondNumber;
         result[1] = String.valueOf(numberResult);
 
         return result;

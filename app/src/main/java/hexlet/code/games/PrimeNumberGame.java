@@ -11,7 +11,7 @@ public class PrimeNumberGame {
 
         Scanner scanner = new Scanner(System.in);
         String username = scanner.next();
-        
+
         int count = 0;
         while (count < 3) {
             int number = (int) (Math.random() * 100);
