@@ -24,13 +24,13 @@ public class CalculatorGame {
 
         switch (indexOfOperation) {
             case (0):
-                nameOfOperation = " + ";
+                nameOfOperation = "+";
                 break;
             case (1):
-                nameOfOperation = " - ";
+                nameOfOperation = "-";
                 break;
             case (2):
-                nameOfOperation = " * ";
+                nameOfOperation = "*";
                 break;
             default:
                 break;
