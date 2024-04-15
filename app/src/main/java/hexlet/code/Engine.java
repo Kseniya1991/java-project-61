@@ -17,15 +17,16 @@ public class Engine {
         int count = 0;
         while (count != ROUNDS_COUNT) {
             System.out.println(rules); //правила
-            System.out.println(Arrays.toString(questionAnswer[count])); //сгенерированный массив
+            System.out.println(Arrays.toString(questionAnswer[count])); //показать сгенерированный массив условий
 
-            System.out.println("Question: " + Integer.parseInt(questionAnswer[count][0])); //"Question: "
-            System.out.println("Your answer: "); //"Your answer: "
+            System.out.println("Question: " + questionAnswer[count][0]);
+            System.out.println("Your answer: ");
             String answer = scanner.next();
 
-            if (!answer.equals("no") && !answer.equals("yes")) {
+            if (!Arrays.asList(questionAnswer[count]).contains(answer)) {
                 System.out.println(answer + " is wrong answer ;(."
                         + "\nLet's try again, " + username + "!");
+                break;
             }
 
             if (answer.equals(questionAnswer[count][1])) {

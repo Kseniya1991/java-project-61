@@ -1,65 +1,62 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import java.util.Scanner;
 
 public class CalculatorGame {
     public static void startCalculatorGame() {
-        System.out.println("Welcome to the Brain Games!\n" + "May I have your name?");
-        Scanner scanner = new Scanner(System.in);
-        String username = scanner.next();
-        System.out.println("Hello, " + username + "!");
+        String rules = "What is the result of the expression?"; //правила
+        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2]; //три массива нагенерить три раза
 
-        int count = 0;
-        while (count < 3) {
-            int indexOfOperation = (int) (Math.random() * 3);
-            String nameOfOperation = "";
-            int firstNumber = (int) (Math.random() * 100);
-            int secondNumber = (int) (Math.random() * 100);
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questionAnswer[i] = createQuestionAndAnswer();
+        }
 
-            switch (indexOfOperation) {
-                case (0):
-                    nameOfOperation = " + ";
-                    break;
-                case (1):
-                    nameOfOperation = " - ";
-                    break;
-                case (2):
-                    nameOfOperation = " * ";
-                    break;
-                default:
-                    break;
-            }
-            int result = 0;
+        Engine.run(rules, questionAnswer);
+    }
 
-            switch (indexOfOperation) {
-                case (0):
-                    result = Math.addExact(firstNumber, secondNumber);
-                    break;
-                case (1):
-                    result = Math.subtractExact(firstNumber, secondNumber);
-                    break;
-                case (2):
-                    result = Math.multiplyExact(firstNumber, secondNumber);
-                    break;
-                default:
-                    break;
-            }
+    public static String[] createQuestionAndAnswer() {
+        String[] result = new String[2]; //возвращаемый массив
 
-            System.out.println("What is the result of the expression?");
-            System.out.println("Question: " + firstNumber + nameOfOperation + secondNumber);
-            System.out.println("Your answer: ");
-            int answer = scanner.nextInt();
-            if (answer == result) {
-                System.out.println("Correct!");
-                count++;
-            } else {
-                System.out.println("'" + answer + "'" + " is wrong answer ;(. Correct answer was '"
-                        + result + "'. \nLet's try again, " + username + "!");
+        int firstNumber = (int) (Math.random() * 100);
+        int indexOfOperation = (int) (Math.random() * 3);
+        int secondNumber = (int) (Math.random() * 100);
+        String nameOfOperation = "";
+
+        switch (indexOfOperation) {
+            case (0):
+                nameOfOperation = " + ";
                 break;
-            }
+            case (1):
+                nameOfOperation = " - ";
+                break;
+            case (2):
+                nameOfOperation = " * ";
+                break;
+            default:
+                break;
         }
-        if (count == 3) {
-            System.out.println("Congratulations, " + username + "!");
+
+        int numberResult = 0;
+
+        switch (indexOfOperation) {
+            case (0):
+                numberResult = Math.addExact(firstNumber, secondNumber);
+                break;
+            case (1):
+                numberResult = Math.subtractExact(firstNumber, secondNumber);
+                break;
+            case (2):
+                numberResult = Math.multiplyExact(firstNumber, secondNumber);
+                break;
+            default:
+                break;
         }
+
+        result[0] =  firstNumber + " " + nameOfOperation + " " + secondNumber; //вопрос
+        result[1] = String.valueOf(numberResult);
+
+        return result;
     }
 }

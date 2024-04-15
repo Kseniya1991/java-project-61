@@ -23,7 +23,6 @@ public class App {
                 break;
             case (2):
                 EvenOrNotGame.startEvenGame();
-
                 break;
             case (3):
                 CalculatorGame.startCalculatorGame();
