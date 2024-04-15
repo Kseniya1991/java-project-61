@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.EvenOrNotGame;
+
 import java.util.Scanner;
 
 public class Engine {
@@ -12,23 +14,20 @@ public class Engine {
         System.out.println("Hello, " + username + "!");
 
         int count = 0;
-
         while (count != ROUNDS_COUNT) {
-            for (String string : questionAnswer) {
-                System.out.println(rules); //правила
-                System.out.println("Question: " + questionAnswer[0]); //"Question: "
-                System.out.println("Your answer: "); //"Your answer: "
-                String answer = scanner.next();
+            System.out.println(rules); //правила
+            String[] condition = EvenOrNotGame.createQuestionAndAnswer(); //генерация массива с вопросом-ответом
+            System.out.println("Question: " + condition[0]); //"Question: "
+            System.out.println("Your answer: "); //"Your answer: "
+            String answer = scanner.next();
 
-                if (answer.equals(questionAnswer[1])) {
-                    System.out.println("Correct!");
-                    count++;
-                } else {
-                    System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'. "
-                            + "\nLet's try again, " + username + "!");
-                    break;
-                }
-                System.out.println(count);
+            if (answer.equals(condition[1])) {
+                System.out.println("Correct!");
+                count++;
+            } else {
+                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'. "
+                        + "\nLet's try again, " + username + "!");
+                break;
             }
         }
         if (count == ROUNDS_COUNT) {

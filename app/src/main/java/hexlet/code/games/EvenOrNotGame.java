@@ -2,13 +2,11 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
 public class EvenOrNotGame {
     public static void startEvenGame() {
 
         String rules = "Answer 'yes' if the number is even, otherwise answer 'no'."; //правила
-        String[] questionAnswer = createQuestionAndAnswer(); //вопрос-ответ
+        String[] questionAnswer = new String[2]; //вопрос-ответ
         Engine.run(rules, questionAnswer);
     }
 
