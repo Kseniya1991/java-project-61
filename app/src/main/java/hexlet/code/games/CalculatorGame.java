@@ -18,26 +18,22 @@ public class CalculatorGame {
         int firstNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
         int indexOfOperation = (int) (Math.random() * countOfOperations);
         int secondNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
-        String nameOfOperation = "";
         int numberResult = 0;
 
         switch (indexOfOperation) {
             case (0):
                 numberResult = Math.addExact(firstNumber, secondNumber);
-                nameOfOperation = operations[0];
                 break;
             case (1):
                 numberResult = Math.subtractExact(firstNumber, secondNumber);
-                nameOfOperation = operations[1];
                 break;
             case (2):
                 numberResult = Math.multiplyExact(firstNumber, secondNumber);
-                nameOfOperation = operations[2];
                 break;
             default:
                 break;
         }
-        result[0] =  firstNumber + " " + nameOfOperation + " " + secondNumber;
+        result[0] =  firstNumber + " " + operations[indexOfOperation] + " " + secondNumber;
         result[1] = String.valueOf(numberResult);
 
         return result;

@@ -19,15 +19,20 @@ public class App {
     public static void gameRun(int point) {
         if (point == Cli.MENU_ITEM) {
             Cli.sayHi();
-        } else if (point == EvenOrNotGame.MENU_ITEM) {
+        }
+        if (point == EvenOrNotGame.MENU_ITEM) {
             EvenOrNotGame.startEvenGame();
-        } else if (point == CalculatorGame.MENU_ITEM) {
+        }
+        if (point == CalculatorGame.MENU_ITEM) {
             CalculatorGame.startCalculatorGame();
-        } else if (point == GreatestCommonDivisorGame.MENU_ITEM) {
+        }
+        if (point == GreatestCommonDivisorGame.MENU_ITEM) {
             GreatestCommonDivisorGame.startGame();
-        } else if (point == ProgressionGame.MENU_ITEM) {
+        }
+        if (point == ProgressionGame.MENU_ITEM) {
             ProgressionGame.startProgressionGame();
-        } else if (point == PrimeNumberGame.MENU_ITEM) {
+        }
+        if (point == PrimeNumberGame.MENU_ITEM) {
             PrimeNumberGame.startPrimeNumberGame();
         }
     }
