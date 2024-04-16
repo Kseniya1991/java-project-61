@@ -40,31 +40,3 @@ public class ProgressionGame {
         return result;
     }
 }
-
-public static String[] createQuestionAndAnswer() {
-    String[] result = new String[2]; //массив вопрос-ответ
-    int[] progression = new int[10]; //массив вопрос, список чисел
-    int begin = 1 + (int) (Math.random() * 10); //начальное число, исключая ноль
-    int summWith = (int) (Math.random() * 10); //число, на которое увеличивают предыдущее
-    progression[0] = begin; //начальное число в массиве
-    int begin = (int) (Math.random() * 10); //начальное число, исключая ноль
-    int summWith = 1 + (int) (Math.random() * 10); //число, на которое увеличивают предыдущее
-    //progression[0] = begin; //начальное число в массиве
-
-    for (int i = 1; i < progression.length; i++) {
-        progression[i] = progression[i - 1] + summWith;
-    }
-    int answer = progression[(int) (Math.random() * 9)]; //задаем число-ответ
-    result[1] = answer + "";
-    String question = "";
-    for (int i = 1; i < progression.length; i++) {
-        if (progression[i] == answer) {
-            question += ".. ";
-        } else {
-            question += progression[i] + " ";
-        }
-    }
-    result[0] = question;
-    return result;
-}
-}
