@@ -20,17 +20,16 @@ public class GreatestCommonDivisorGame {
         int secondNumber = (int) (Math.random() * 100);
         int max = Math.max(firstNumber, secondNumber);
         int min = Math.min(firstNumber, secondNumber);
+        result[0] = firstNumber + " " + secondNumber;
 
         if (min == 0) {
             result[1] = String.valueOf(max);
         }
 
-        int modulo = max % min; //остаток от деления
-        result[0] = firstNumber + " " + secondNumber;
-
-        if (modulo == 0) {
+        if (max % min == 0) {
             result[1] = String.valueOf(min);
         } else {
+            int modulo = max % min;
             while (modulo != 0) {
                 int temp = min % modulo;
                 min = modulo;
