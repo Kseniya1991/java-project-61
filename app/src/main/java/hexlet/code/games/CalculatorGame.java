@@ -18,42 +18,30 @@ public class CalculatorGame {
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2];
         final int countOfOperations = 3;
+        String[] operations = {"+", "-", "*"};
 
         int firstNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
         int indexOfOperation = (int) (Math.random() * countOfOperations);
         int secondNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
         String nameOfOperation = "";
-
-        switch (indexOfOperation) {
-            case (0):
-                nameOfOperation = "+";
-                break;
-            case (1):
-                nameOfOperation = "-";
-                break;
-            case (2):
-                nameOfOperation = "*";
-                break;
-            default:
-                break;
-        }
-
         int numberResult = 0;
 
         switch (indexOfOperation) {
             case (0):
                 numberResult = Math.addExact(firstNumber, secondNumber);
+                nameOfOperation = operations[0];
                 break;
             case (1):
                 numberResult = Math.subtractExact(firstNumber, secondNumber);
+                nameOfOperation = operations[1];
                 break;
             case (2):
                 numberResult = Math.multiplyExact(firstNumber, secondNumber);
+                nameOfOperation = operations[2];
                 break;
             default:
                 break;
         }
-
         result[0] =  firstNumber + " " + nameOfOperation + " " + secondNumber;
         result[1] = String.valueOf(numberResult);
 
