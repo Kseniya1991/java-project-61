@@ -16,8 +16,7 @@ public class PrimeNumberGame {
 
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2]; //массив вопрос-ответ
-        int numberRange = 100;
-        int number = (int) (Math.random() * numberRange);
+        int number = (int) (Math.random() * Engine.NUMBER_RANGE);
         result[0] = String.valueOf(number); //вопрос
 
         int countOfDividers = 3;

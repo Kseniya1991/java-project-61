@@ -21,7 +21,6 @@ public class ProgressionGame {
         int numberRange = 100;
         int begin = (int) (Math.random() * numberRange); //начальное число, исключая ноль
         int summWith = 1 + (int) (Math.random() * numberRange); //число, на которое увеличивают предыдущее
-        //progression[0] = begin; //начальное число в массиве
 
         for (int i = 1; i < progression.length; i++) {
             progression[i] = progression[i - 1] + summWith;

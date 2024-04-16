@@ -16,8 +16,7 @@ public class EvenOrNotGame {
 
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2];
-        int numberRange = 100;
-        int number = (int) (Math.random() * numberRange);
+        int number = (int) (Math.random() * Engine.NUMBER_RANGE);
         result[0] = String.valueOf(number);
 
         if (number % 2 == 0) {

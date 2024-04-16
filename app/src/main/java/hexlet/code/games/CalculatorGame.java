@@ -16,12 +16,11 @@ public class CalculatorGame {
 
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2];
-        int numberRange = 100;
         int countOfOperations = 3;
 
-        int firstNumber = (int) (Math.random() * numberRange);
+        int firstNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
         int indexOfOperation = (int) (Math.random() * countOfOperations);
-        int secondNumber = (int) (Math.random() * numberRange);
+        int secondNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
         String nameOfOperation = "";
 
         switch (indexOfOperation) {

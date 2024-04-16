@@ -16,17 +16,15 @@ public class GreatestCommonDivisorGame {
 
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2];
-        int firstNumber = (int) (Math.random() * 100);
-        int secondNumber = (int) (Math.random() * 100);
+        int firstNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
+        int secondNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
         int max = Math.max(firstNumber, secondNumber);
         int min = Math.min(firstNumber, secondNumber);
         result[0] = firstNumber + " " + secondNumber;
 
         if (min == 0) {
             result[1] = String.valueOf(max);
-        }
-
-        if (max % min == 0) {
+        } else if (max % min == 0) {
             result[1] = String.valueOf(min);
         } else {
             int modulo = max % min;
