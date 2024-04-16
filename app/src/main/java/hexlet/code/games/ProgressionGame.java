@@ -34,13 +34,13 @@ public class ProgressionGame {
 
         int answer = progression[hiddenNumberIndex]; //задаем число-ответ
         result[1] = String.valueOf(answer);
-        result[0] = begin + " ";
+        result[0] = String.valueOf(begin);
 
         for (int i = 1; i < progression.length; i++) {
             if (i == hiddenNumberIndex) {
-                result[0] += ".. ";
+                result[0] += " ..";
             } else {
-                result[0] += progression[i] + " ";
+                result[0] += " " + progression[i];
             }
         }
 
