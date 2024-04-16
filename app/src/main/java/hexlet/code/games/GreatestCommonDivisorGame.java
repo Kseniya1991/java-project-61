@@ -16,8 +16,8 @@ public class GreatestCommonDivisorGame {
 
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2];
-        int firstNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
-        int secondNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
+        int firstNumber = 1 + (int) (Math.random() * Engine.NUMBER_RANGE);
+        int secondNumber = 1 + (int) (Math.random() * Engine.NUMBER_RANGE);
         int max = Math.max(firstNumber, secondNumber);
         int min = Math.min(firstNumber, secondNumber);
         result[0] = firstNumber + " " + secondNumber;
