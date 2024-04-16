@@ -19,27 +19,18 @@ public class App {
     }
 
     public static void gameRun(int point) {
-        switch (point) {
-            case (1):
-                Cli.sayHi();
-                break;
-            case (2):
-                EvenOrNotGame.startEvenGame();
-                break;
-            case (3):
-                CalculatorGame.startCalculatorGame();
-                break;
-            case (4):
-                GreatestCommonDivisorGame.startGame();
-                break;
-            case (5):
-                ProgressionGame.startProgressionGame();
-                break;
-            case (6):
-                PrimeNumberGame.startPrimeNumberGame();
-                break;
-            default:
-                break;
+        if (point == 1) {
+            Cli.sayHi();
+        } else if (point == 2) {
+            EvenOrNotGame.startEvenGame();
+        } else if (point == 3) {
+            CalculatorGame.startCalculatorGame();
+        } else if (point == 4) {
+            GreatestCommonDivisorGame.startGame();
+        } else if (point == 5) {
+            ProgressionGame.startProgressionGame();
+        } else if (point == 6) {
+            PrimeNumberGame.startPrimeNumberGame();
         }
     }
 }
