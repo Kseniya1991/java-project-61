@@ -17,17 +17,19 @@ public class PrimeNumberGame {
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2]; //массив вопрос-ответ
         int number = (int) (Math.random() * 100);
-        result[0] = String.valueOf(number);
-
-        if (number < 2) {
-            result[1] = "no";
-        }
+        result[0] = String.valueOf(number); //вопрос
 
         int countOfDividers = 3;
         int counter = 0;
-        for (int i = 1; i <= number; i++) {
-            if (number % i == 0) {
-                counter++;
+
+        if (number < 2) {
+            result[1] = "no";
+        } else {
+            for (int i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    result[1] = "yes";
+                    counter++;
+                }
             }
         }
 
