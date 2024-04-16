@@ -37,10 +37,11 @@ public class ProgressionGame {
         result[0] = String.valueOf(begin);
 
         for (int i = 1; i < progression.length; i++) {
+            result[0] += " ";
             if (i == hiddenNumberIndex) {
-                result[0] += " ..";
+                result[0] += "..";
             } else {
-                result[0] += " " + progression[i];
+                result[0] += String.valueOf(progression[i]);
             }
         }
 
