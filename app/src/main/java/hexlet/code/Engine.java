@@ -9,14 +9,13 @@ public class Engine {
     public static void run(String rules, String[][] questionAnswer) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name? ");
+        System.out.print("May I have your name? ");
         String username = scanner.next();
         System.out.println("Hello, " + username + "!");
 
         int count = 0;
         while (count != ROUNDS_COUNT) {
             System.out.println(rules);
-
             System.out.println("Question: " + questionAnswer[count][0]);
             System.out.print("Your answer: ");
             String answer = scanner.next();

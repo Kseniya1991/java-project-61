@@ -2,8 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
-
 public class ProgressionGame {
     public static void startProgressionGame() {
         String rules = "What number is missing in the progression?";
@@ -19,24 +17,29 @@ public class ProgressionGame {
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2]; //массив вопрос-ответ
         int progressionLength = 10;
+        int indexOfHidden = 1 + (int) (Math.random() * progressionLength - 1);
         int begin = (int) (Math.random() * Engine.NUMBER_RANGE); //начальное число, исключая ноль
-        int summWith = 1 + (int) (Math.random() * 10); //число, на которое увеличивают предыдущее
+        int difference = 1 + (int) (Math.random() * 10); //число, на которое увеличивают предыдущее
         int[] progression = new int[progressionLength]; //массив вопрос, список чисел
+        progression[0] = begin;
 
         for (int i = 1; i < progression.length; i++) {
-            progression[i] = progression[i - 1] + summWith;
+            progression[i] = progression[i - 1] + difference;
         }
-        int answer = progression[(int) (Math.random() * 9)]; //задаем число-ответ
-        result[1] = answer + "";
-        String question = "";
+
+        int answer = progression[indexOfHidden]; //задаем число-ответ
+        result[1] = String.valueOf(answer);
+        result[0] = String.valueOf(begin);
+
         for (int i = 1; i < progression.length; i++) {
-            if (progression[i] == answer) {
-                question += ".. ";
+            result[0] += " ";
+            if (i == indexOfHidden) {
+                result[0] += "..";
             } else {
-                question += progression[i] + " ";
+                result[0] += String.valueOf(begin + difference * i);
             }
         }
-        result[0] = question;
+
         return result;
     }
 }
