@@ -23,7 +23,7 @@ public class Engine {
                 System.out.println("Correct!");
                 count++;
             } else {
-                System.out.println("'" + answer + "'"  + " is wrong answer ;(."
+                System.out.println("'" + answer + "'"  + " is wrong answer ;(. "
                         + "Correct answer was '" + questionAnswer[count][1] + "'. "
                         + "\nLet's try again, " + username + "!");
                 break;
