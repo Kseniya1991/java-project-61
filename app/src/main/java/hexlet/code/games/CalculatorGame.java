@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class CalculatorGame {
-    public static int menuItem = 3;
+    public static final int MENU_ITEM = 3;
     public static void startCalculatorGame() {
         String rules = "What is the result of the expression?";
         String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];

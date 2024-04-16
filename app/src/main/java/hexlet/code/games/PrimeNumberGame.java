@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class PrimeNumberGame {
-    public static int menuItem = 6;
+    public static final int MENU_ITEM = 6;
     public static void startPrimeNumberGame() {
         String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];

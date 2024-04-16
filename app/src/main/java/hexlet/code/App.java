@@ -13,21 +13,21 @@ public class App {
         printMenu();
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-        gameRun(choice);
+        App.gameRun(choice);
     }
 
     public static void gameRun(int point) {
         if (point == Cli.menuItem) {
             Cli.sayHi();
-        } else if (point == EvenOrNotGame.menuItem) {
+        } else if (point == EvenOrNotGame.MENU_ITEM) {
             EvenOrNotGame.startEvenGame();
-        } else if (point == CalculatorGame.menuItem) {
+        } else if (point == CalculatorGame.MENU_ITEM) {
             CalculatorGame.startCalculatorGame();
-        } else if (point == GreatestCommonDivisorGame.menuItem) {
+        } else if (point == GreatestCommonDivisorGame.MENU_ITEM) {
             GreatestCommonDivisorGame.startGame();
-        } else if (point == ProgressionGame.menuItem) {
+        } else if (point == ProgressionGame.MENU_ITEM) {
             ProgressionGame.startProgressionGame();
-        } else if (point == PrimeNumberGame.menuItem) {
+        } else if (point == PrimeNumberGame.MENU_ITEM) {
             PrimeNumberGame.startPrimeNumberGame();
         }
     }
