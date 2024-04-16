@@ -1,18 +1,13 @@
 package hexlet.code.games;
 
+import hexlet.code.AddVariable;
 import hexlet.code.Engine;
 
 public class CalculatorGame {
     public static final int MENU_ITEM = 3;
     public static void startCalculatorGame() {
-        String rules = "What is the result of the expression?";
-        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-
-        Engine.run(rules, questionAnswer);
+        Engine.run(AddVariable.createRules("What is the result of the expression?"),
+                AddVariable.createQuestionAnswerArray(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {

@@ -7,6 +7,7 @@ public class Engine {
     public static final int NUMBER_RANGE = 100;
 
     public static void run(String rules, String[][] questionAnswer) {
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");

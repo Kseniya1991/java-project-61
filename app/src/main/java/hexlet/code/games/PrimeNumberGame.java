@@ -1,18 +1,13 @@
 package hexlet.code.games;
 
+import hexlet.code.AddVariable;
 import hexlet.code.Engine;
 
 public class PrimeNumberGame {
     public static final int MENU_ITEM = 6;
     public static void startPrimeNumberGame() {
-        String rules = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-
-        Engine.run(rules, questionAnswer);
+        Engine.run(AddVariable.createRules("Answer 'yes' if given number is prime. Otherwise answer 'no'."),
+                AddVariable.createQuestionAnswerArray(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {

@@ -1,18 +1,13 @@
 package hexlet.code.games;
 
+import hexlet.code.AddVariable;
 import hexlet.code.Engine;
 
 public class EvenOrNotGame {
     public static final int MENU_ITEM = 2;
     public static void startEvenGame() {
-        String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-
-        Engine.run(rules, questionAnswer);
+        Engine.run(AddVariable.createRules("Answer 'yes' if the number is even, otherwise answer 'no'."),
+                AddVariable.createQuestionAnswerArray(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {

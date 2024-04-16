@@ -1,19 +1,14 @@
 package hexlet.code.games;
 
+import hexlet.code.AddVariable;
 import hexlet.code.Engine;
 
 public class GreatestCommonDivisorGame {
     public static final int MENU_ITEM = 4;
 
     public static void startGame() {
-        String rules = "Find the greatest common divisor of given numbers."; //правила
-        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2]; //три массива нагенерить три раза
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-
-        Engine.run(rules, questionAnswer);
+        Engine.run(AddVariable.createRules("Find the greatest common divisor of given numbers."),
+                AddVariable.createQuestionAnswerArray(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {

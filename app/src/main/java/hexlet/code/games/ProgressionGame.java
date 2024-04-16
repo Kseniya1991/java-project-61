@@ -1,18 +1,13 @@
 package hexlet.code.games;
 
+import hexlet.code.AddVariable;
 import hexlet.code.Engine;
 
 public class ProgressionGame {
     public static final int MENU_ITEM = 5;
     public static void startProgressionGame() {
-        String rules = "What number is missing in the progression?";
-        String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-
-        Engine.run(rules, questionAnswer);
+        Engine.run(AddVariable.createRules("What number is missing in the progression?"),
+                AddVariable.createQuestionAnswerArray(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {
