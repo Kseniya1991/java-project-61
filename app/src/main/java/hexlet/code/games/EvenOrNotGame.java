@@ -3,6 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class EvenOrNotGame {
+    public static int menuItem = 2;
     public static void startEvenGame() {
         String rules = "Answer 'yes' if the number is even, otherwise answer 'no'.";
         String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];

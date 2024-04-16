@@ -3,6 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GreatestCommonDivisorGame {
+    public static int menuItem = 4;
     public static void startGame() {
         String rules = "Find the greatest common divisor of given numbers."; //правила
         String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2]; //три массива нагенерить три раза

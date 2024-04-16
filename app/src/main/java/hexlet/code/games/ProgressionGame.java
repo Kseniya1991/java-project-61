@@ -3,6 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class ProgressionGame {
+    public static int menuItem = 5;
     public static void startProgressionGame() {
         String rules = "What number is missing in the progression?";
         String[][] questionAnswer = new String[Engine.ROUNDS_COUNT][2];
@@ -20,7 +21,7 @@ public class ProgressionGame {
         int indexOfHidden = 1 + (int) (Math.random() * progressionLength - 1);
         int begin = (int) (Math.random() * Engine.NUMBER_RANGE); //начальное число, исключая ноль
         final int minDifference = 1;
-        final int difference = minDifference + (int) (Math.random() * 10); //число, на которое увеличивают предыдущее
+        int difference = minDifference + (int) (Math.random() * progressionLength); //число, на которое увеличивают предыдущее
         int[] progression = new int[progressionLength]; //массив вопрос, список чисел
         progression[0] = begin;
 
