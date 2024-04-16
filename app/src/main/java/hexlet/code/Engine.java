@@ -1,8 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.EvenOrNotGame;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Engine {
@@ -16,12 +13,10 @@ public class Engine {
 
         int count = 0;
         while (count != ROUNDS_COUNT) {
-            System.out.println(rules); //правила
-
-            //System.out.println(Arrays.toString(questionAnswer[count])); //показать сгенерированный массив условий
+            System.out.println(rules);
 
             System.out.println("Question: " + questionAnswer[count][0]);
-            System.out.println("Your answer: ");
+            System.out.print("Your answer: ");
             String answer = scanner.next();
 
             if (answer.equals(questionAnswer[count][1])) {
@@ -33,12 +28,6 @@ public class Engine {
                         + "\nLet's try again, " + username + "!");
                 break;
             }
-
-            /*if (!Arrays.asList(questionAnswer[count]).contains(answer)) {
-                System.out.println(answer + " is wrong answer ;(."
-                        + "\nLet's try again, " + username + "!");
-                break;
-            } */
         }
         if (count == ROUNDS_COUNT) {
             System.out.println("Congratulations, " + username + "!");
