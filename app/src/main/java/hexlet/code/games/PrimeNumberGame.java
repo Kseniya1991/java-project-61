@@ -19,7 +19,7 @@ public class PrimeNumberGame {
         int number = (int) (Math.random() * Engine.NUMBER_RANGE);
         result[0] = String.valueOf(number); //вопрос
 
-        int countOfDividers = 3;
+        final int countOfDividers = 3;
         int counter = 0;
 
         if (number < 2) {

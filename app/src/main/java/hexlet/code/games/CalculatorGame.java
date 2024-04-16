@@ -16,7 +16,7 @@ public class CalculatorGame {
 
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2];
-        int countOfOperations = 3;
+        final int countOfOperations = 3;
 
         int firstNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
         int indexOfOperation = (int) (Math.random() * countOfOperations);

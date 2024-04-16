@@ -16,7 +16,7 @@ public class ProgressionGame {
 
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2]; //массив вопрос-ответ
-        int progressionLength = 10;
+        final int progressionLength = 10;
         int indexOfHidden = 1 + (int) (Math.random() * progressionLength - 1);
         int begin = (int) (Math.random() * Engine.NUMBER_RANGE); //начальное число, исключая ноль
         int difference = 1 + (int) (Math.random() * 10); //число, на которое увеличивают предыдущее
