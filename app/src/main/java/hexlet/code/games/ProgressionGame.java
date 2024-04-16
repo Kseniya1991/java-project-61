@@ -19,7 +19,8 @@ public class ProgressionGame {
         final int progressionLength = 10;
         int indexOfHidden = 1 + (int) (Math.random() * progressionLength - 1);
         int begin = (int) (Math.random() * Engine.NUMBER_RANGE); //начальное число, исключая ноль
-        int difference = 1 + (int) (Math.random() * 10); //число, на которое увеличивают предыдущее
+        final int minDifference = 1;
+        int difference = minDifference + (int) (Math.random() * 10); //число, на которое увеличивают предыдущее
         int[] progression = new int[progressionLength]; //массив вопрос, список чисел
         progression[0] = begin;
 

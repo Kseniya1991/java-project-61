@@ -15,9 +15,13 @@ public class App {
                 + "\n5 - Progression" + "\n6 - Prime" + "\n0 - Exit" + "\nYour choice: ");
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
-        switch (choice) {
+        gameRun(choice);
+    }
+
+    public static void gameRun(int point) {
+        switch (point) {
             case (1):
-                Cli.sayHi(); //только приветствие
+                Cli.sayHi();
                 break;
             case (2):
                 EvenOrNotGame.startEvenGame();
