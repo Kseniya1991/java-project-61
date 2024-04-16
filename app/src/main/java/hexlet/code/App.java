@@ -17,7 +17,7 @@ public class App {
     }
 
     public static void gameRun(int point) {
-        if (point == Cli.menuItem) {
+        if (point == Cli.MENU_ITEM) {
             Cli.sayHi();
         } else if (point == EvenOrNotGame.MENU_ITEM) {
             EvenOrNotGame.startEvenGame();
