@@ -2,9 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import java.util.Arrays;
-import java.util.Scanner;
-
 public class ProgressionGame {
     public static void startProgressionGame() {
         String rules = "What number is missing in the progression?";
@@ -30,16 +27,17 @@ public class ProgressionGame {
 
         int answer = progression[(int) (Math.random() * 9)]; //задаем число-ответ
         result[1] = answer + "";
-        result[0] = progression[0] + " ";
+        String question = "";
 
         for (int i = 1; i < progression.length; i++) {
-
             if (progression[i] == answer) {
-                result[0] += ".. ";
+                question += ".. ";
             } else {
-                result[0] += progression[i] + " ";
+                question += progression[i] + " ";
             }
         }
+
+        result[0] = question;
 
         return result;
     }
