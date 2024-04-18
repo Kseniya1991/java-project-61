@@ -6,9 +6,13 @@ import hexlet.code.Engine;
 public class GreatestCommonDivisorGame {
     public static final int MENU_ITEM = 4;
     public static final String GAME_RULES = "Find the greatest common divisor of given numbers.";
-
     public static void startGame() {
-        Engine.run(GAME_RULES, Utils.createMatrix(MENU_ITEM));
+        String[][] questionAnswer = Utils.createMatrix();
+
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questionAnswer[i] = createQuestionAndAnswer();
+        }
+        Engine.run(GAME_RULES, questionAnswer);
     }
 
     public static String[] createQuestionAndAnswer() {
@@ -19,7 +23,6 @@ public class GreatestCommonDivisorGame {
         int min = Math.min(firstNumber, secondNumber);
         result[0] = firstNumber + " " + secondNumber;
         result[1] = getAnswer(min, max);
-
         return result;
     }
 
@@ -38,7 +41,6 @@ public class GreatestCommonDivisorGame {
             }
             result = String.valueOf(min);
         }
-
         return result;
     }
 }

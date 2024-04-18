@@ -7,7 +7,12 @@ public class PrimeNumberGame {
     public static final int MENU_ITEM = 6;
     public static final String GAME_RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     public static void startPrimeNumberGame() {
-        Engine.run(GAME_RULES, Utils.createMatrix(MENU_ITEM));
+        String[][] questionAnswer = Utils.createMatrix();
+
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questionAnswer[i] = createQuestionAndAnswer();
+        }
+        Engine.run(GAME_RULES, questionAnswer);
     }
 
     public static String[] createQuestionAndAnswer() {
