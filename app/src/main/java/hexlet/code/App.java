@@ -17,27 +17,23 @@ public class App {
     }
 
     public static void gameRun(int point) {
-        switch (point) {
-            case (Cli.MENU_ITEM):
-                Cli.sayHi();
-                break;
-            case (EvenOrNotGame.MENU_ITEM):
-                EvenOrNotGame.startEvenGame();
-                break;
-            case (CalculatorGame.MENU_ITEM):
-                CalculatorGame.startCalculatorGame();
-                break;
-            case (GreatestCommonDivisorGame.MENU_ITEM):
-                GreatestCommonDivisorGame.startGame();
-                break;
-            case (ProgressionGame.MENU_ITEM):
-                ProgressionGame.startProgressionGame();
-                break;
-            case (PrimeNumberGame.MENU_ITEM):
-                PrimeNumberGame.startPrimeNumberGame();
-                break;
-            default:
-                break;
+        if (point == Cli.MENU_ITEM) {
+            Cli.sayHi();
+        }
+        if (point == EvenOrNotGame.MENU_ITEM) {
+            EvenOrNotGame.startEvenGame();
+        }
+        if (point == CalculatorGame.MENU_ITEM) {
+            CalculatorGame.startCalculatorGame();
+        }
+        if (point == GreatestCommonDivisorGame.MENU_ITEM) {
+            GreatestCommonDivisorGame.startGame();
+        }
+        if (point == ProgressionGame.MENU_ITEM) {
+            ProgressionGame.startProgressionGame();
+        }
+        if (point == PrimeNumberGame.MENU_ITEM) {
+            PrimeNumberGame.startPrimeNumberGame();
         }
     }
 
