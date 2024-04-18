@@ -7,12 +7,7 @@ public class EvenOrNotGame {
     public static final int MENU_ITEM = 2;
     public static final String GAME_RULES = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     public static void startEvenGame() {
-        String[][] questionAnswer = Utils.createMatrix();
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-        Engine.run(GAME_RULES, questionAnswer);
+        Engine.run(GAME_RULES, Utils.createMatrix(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {

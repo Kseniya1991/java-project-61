@@ -8,12 +8,7 @@ public class GreatestCommonDivisorGame {
     public static final String GAME_RULES = "Find the greatest common divisor of given numbers.";
 
     public static void startGame() {
-        String[][] questionAnswer = Utils.createMatrix();
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-        Engine.run(GAME_RULES, questionAnswer);
+        Engine.run(GAME_RULES, Utils.createMatrix(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {

@@ -8,12 +8,7 @@ public class ProgressionGame {
     public static final String GAME_RULES = "What number is missing in the progression?";
     public static final int PROGRESSION_LENGTH = 10;
     public static void startProgressionGame() {
-        String[][] questionAnswer = Utils.createMatrix();
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-        Engine.run(GAME_RULES, questionAnswer);
+        Engine.run(GAME_RULES, Utils.createMatrix(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {
