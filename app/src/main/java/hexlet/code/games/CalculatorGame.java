@@ -1,25 +1,36 @@
 package hexlet.code.games;
 
-import hexlet.code.AddVariable;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class CalculatorGame {
     public static final int MENU_ITEM = 3;
+    public static final String GAME_RULES = "What is the result of the expression?";
+    public static final int COUNT_OF_OPERATION = 3;
     public static void startCalculatorGame() {
-        Engine.run(AddVariable.createRules("What is the result of the expression?"),
-                AddVariable.createQuestionAnswerArray(MENU_ITEM));
+        String[][] questionAnswer = Utils.createMatrix();
+
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            questionAnswer[i] = createQuestionAndAnswer();
+        }
+        Engine.run(GAME_RULES, questionAnswer);
     }
 
     public static String[] createQuestionAndAnswer() {
         String[] result = new String[2];
-        final int countOfOperations = 3;
         String[] operations = {"+", "-", "*"};
-
-        int firstNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
-        int indexOfOperation = (int) (Math.random() * countOfOperations);
-        int secondNumber = (int) (Math.random() * Engine.NUMBER_RANGE);
+        int firstNumber = Utils.generateRandomNumber(Engine.NUMBER_RANGE);
+        int indexOfOperation = Utils.generateRandomNumber(COUNT_OF_OPERATION);
+        int secondNumber = Utils.generateRandomNumber(Engine.NUMBER_RANGE);
         int numberResult = 0;
+        result[0] = firstNumber + " " + operations[indexOfOperation] + " " + secondNumber;
+        result[1] = String.valueOf(getAnswer(firstNumber, secondNumber, indexOfOperation));
 
+        return result;
+    }
+
+    public static int getAnswer(int firstNumber, int secondNumber, int indexOfOperation) {
+        int numberResult = 0;
         switch (indexOfOperation) {
             case (0):
                 numberResult = Math.addExact(firstNumber, secondNumber);
@@ -33,9 +44,6 @@ public class CalculatorGame {
             default:
                 break;
         }
-        result[0] =  firstNumber + " " + operations[indexOfOperation] + " " + secondNumber;
-        result[1] = String.valueOf(numberResult);
-
-        return result;
+        return numberResult;
     }
 }

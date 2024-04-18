@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Engine {
     public static final int ROUNDS_COUNT = 3;
     public static final int NUMBER_RANGE = 100;
+    public static final int START_WITH = 1;
 
     public static void run(String rules, String[][] questionAnswer) {
 
