@@ -19,7 +19,7 @@ public class EvenOrNotGame {
         String[] result = new String[2];
         int number = Utils.generateRandomNumber(Engine.NUMBER_RANGE);
         result[0] = String.valueOf(number);
-        if (number % 2 == 0) {
+        if (isEven(number)) {
             result[1] = "yes";
         } else {
             result[1] = "no";
@@ -27,7 +27,7 @@ public class EvenOrNotGame {
         return result;
     }
 
-//    public static boolean isEven(int number) {
-//        return number % 2 == 0;
-//    }
+    public static boolean isEven(int number) {
+        return number % 2 == 0;
+    }
 }
