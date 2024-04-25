@@ -22,16 +22,16 @@ public class GreatestCommonDivisorGame {
         int max = Math.max(firstNumber, secondNumber);
         int min = Math.min(firstNumber, secondNumber);
         result[0] = firstNumber + " " + secondNumber;
-        result[1] = getAnswer(min, max);
+        result[1] = String.valueOf(getAnswer(min, max));
         return result;
     }
 
-    public static String getAnswer(int min, int max) {
-        String result = "";
+    public static int getAnswer(int min, int max) {
+        int result = 0;
         if (max == 0) {
-            result = String.valueOf(max);
+            result = max;
         } else if (max % min == 0) {
-            result = String.valueOf(min);
+            result = min;
         } else {
             int modulo = max % min;
             while (modulo != 0) {
@@ -39,7 +39,7 @@ public class GreatestCommonDivisorGame {
                 min = modulo;
                 modulo = temp;
             }
-            result = String.valueOf(min);
+            result = min;
         }
         return result;
     }

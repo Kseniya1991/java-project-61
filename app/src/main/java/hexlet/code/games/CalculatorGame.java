@@ -28,7 +28,7 @@ public class CalculatorGame {
         return result;
     }
 
-    public static int getAnswer(int firstNumber, int secondNumber, int indexOfOperation) {
+    public static Integer getAnswer(int firstNumber, int secondNumber, int indexOfOperation) {
         int numberResult = 0;
         switch (indexOfOperation) {
             case (0):
@@ -41,7 +41,7 @@ public class CalculatorGame {
                 numberResult = Math.multiplyExact(firstNumber, secondNumber);
                 break;
             default:
-                break;
+                return null;
         }
         return numberResult;
     }

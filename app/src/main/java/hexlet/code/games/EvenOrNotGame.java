@@ -19,18 +19,15 @@ public class EvenOrNotGame {
         String[] result = new String[2];
         int number = Utils.generateRandomNumber(Engine.NUMBER_RANGE);
         result[0] = String.valueOf(number);
-        result[1] = getAnswer(number);
-
-        return result;
-    }
-
-    public static String getAnswer(int number) {
-        String result = "";
         if (number % 2 == 0) {
-            result = "yes";
+            result[1] = "yes";
         } else {
-            result = "no";
+            result[1] = "no";
         }
         return result;
     }
+
+//    public static boolean isEven(int number) {
+//        return number % 2 == 0;
+//    }
 }
