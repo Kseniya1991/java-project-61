@@ -25,18 +25,23 @@ public class App {
             }
             if (point == EvenOrNotGame.MENU_ITEM) {
                 questionAnswer[i] = EvenOrNotGame.createQuestionAndAnswer();
+                rules = EvenOrNotGame.GAME_RULES;
             }
             if (point == CalculatorGame.MENU_ITEM) {
                 questionAnswer[i] = CalculatorGame.createQuestionAndAnswer();
+                rules = CalculatorGame.GAME_RULES;
             }
             if (point == GreatestCommonDivisorGame.MENU_ITEM) {
                 questionAnswer[i] = GreatestCommonDivisorGame.createQuestionAndAnswer();
+                rules = GreatestCommonDivisorGame.GAME_RULES;
             }
             if (point == ProgressionGame.MENU_ITEM) {
                 questionAnswer[i] = ProgressionGame.createQuestionAndAnswer();
+                rules = ProgressionGame.GAME_RULES;
             }
             if (point == PrimeNumberGame.MENU_ITEM) {
                 questionAnswer[i] = PrimeNumberGame.createQuestionAndAnswer();
+                rules = PrimeNumberGame.GAME_RULES;
             }
         }
 
