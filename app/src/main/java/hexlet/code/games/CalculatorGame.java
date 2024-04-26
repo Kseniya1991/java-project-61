@@ -7,13 +7,10 @@ public class CalculatorGame {
     public static final int MENU_ITEM = 3;
     public static final String GAME_RULES = "What is the result of the expression?";
     public static final int COUNT_OF_OPERATION = 3;
-    public static void startCalculatorGame() {
-        String[][] questionAnswer = Utils.createMatrix();
 
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-        Engine.run(GAME_RULES, questionAnswer);
+    public static void startCalculatorGame() {
+
+        Engine.run(GAME_RULES, Utils.method(MENU_ITEM));
     }
 
     public static String[] createQuestionAndAnswer() {
