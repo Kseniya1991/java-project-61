@@ -17,24 +17,30 @@ public class App {
     }
 
     public static void gameRun(int point) {
-        if (point == Cli.MENU_ITEM) {
-            Cli.sayHi();
+        String[][] questionAnswer = Utils.createMatrix();
+        String rules = "";
+        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
+            if (point == Cli.MENU_ITEM) {
+                Cli.sayHi();
+            }
+            if (point == EvenOrNotGame.MENU_ITEM) {
+                questionAnswer[i] = EvenOrNotGame.createQuestionAndAnswer();
+            }
+            if (point == CalculatorGame.MENU_ITEM) {
+                questionAnswer[i] = CalculatorGame.createQuestionAndAnswer();
+            }
+            if (point == GreatestCommonDivisorGame.MENU_ITEM) {
+                questionAnswer[i] = GreatestCommonDivisorGame.createQuestionAndAnswer();
+            }
+            if (point == ProgressionGame.MENU_ITEM) {
+                questionAnswer[i] = ProgressionGame.createQuestionAndAnswer();
+            }
+            if (point == PrimeNumberGame.MENU_ITEM) {
+                questionAnswer[i] = PrimeNumberGame.createQuestionAndAnswer();
+            }
         }
-        if (point == EvenOrNotGame.MENU_ITEM) {
-            EvenOrNotGame.startEvenGame();
-        }
-        if (point == CalculatorGame.MENU_ITEM) {
-            CalculatorGame.startCalculatorGame();
-        }
-        if (point == GreatestCommonDivisorGame.MENU_ITEM) {
-            GreatestCommonDivisorGame.startGame();
-        }
-        if (point == ProgressionGame.MENU_ITEM) {
-            ProgressionGame.startProgressionGame();
-        }
-        if (point == PrimeNumberGame.MENU_ITEM) {
-            PrimeNumberGame.startPrimeNumberGame();
-        }
+
+        Engine.run(rules, questionAnswer);
     }
 
     public static void printMenu() {

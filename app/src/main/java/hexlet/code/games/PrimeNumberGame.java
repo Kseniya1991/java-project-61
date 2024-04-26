@@ -6,19 +6,11 @@ import hexlet.code.Engine;
 public class PrimeNumberGame {
     public static final int MENU_ITEM = 6;
     public static final String GAME_RULES = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static void startPrimeNumberGame() {
-        String[][] questionAnswer = Utils.createMatrix();
-
-        for (int i = 0; i < Engine.ROUNDS_COUNT; i++) {
-            questionAnswer[i] = createQuestionAndAnswer();
-        }
-        Engine.run(GAME_RULES, questionAnswer);
-    }
 
     public static String[] createQuestionAndAnswer() {
-        String[] result = new String[2]; //массив вопрос-ответ
+        String[] result = new String[2];
         int number = Utils.generateRandomNumber(Engine.NUMBER_RANGE);
-        result[0] = String.valueOf(number); //вопрос
+        result[0] = String.valueOf(number);
         if (isPrime(number)) {
             result[1] = "yes";
         } else {
