@@ -1,6 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
+import hexlet.code.games.EvenOrNotGame;
+import hexlet.code.games.CalculatorGame;
+import hexlet.code.games.GreatestCommonDivisorGame;
+import hexlet.code.games.ProgressionGame;
+import hexlet.code.games.PrimeNumberGame;
 
 public class Utils {
     public static int generateRandomNumber(int numberRange) {

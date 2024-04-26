@@ -9,7 +9,7 @@ public class CalculatorGame {
     public static final int COUNT_OF_OPERATION = 3;
 
     public static void startCalculatorGame() {
-
+        String[][] questionAnswer = Utils.createMatrix();
         Engine.run(GAME_RULES, Utils.method(MENU_ITEM));
     }
 
